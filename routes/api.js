@@ -6,16 +6,7 @@ var mongoosePaginate = require('mongoose-paginate');
 
 
 const router=express.Router();
-// mongoose.set('useFindAndModify', false);
-// mongoose.set('update', false);
 
-// router.get('/users',(req,res)=>{
-//   User.find({}, function(err, list) {
-//     res.status(200).send(list);
-//   });
-// });
-
-///:page?/:limit?/:name?/:sort?
 router.get('/users',(req,res)=>{
 
   var page = req.query.page;
