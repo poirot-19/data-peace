@@ -9,6 +9,6 @@ const api=require('./routes/api.js');
 app.use(bodyParser.json());
 app.use('/api',api);
 
-app.listen(port,function(){
+app.listen(3000,function(){
   console.log('listening on port '+port);
 });
