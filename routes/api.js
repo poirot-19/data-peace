@@ -14,7 +14,7 @@ router.get('/users',(req,res)=>{
   var name = req.query.name;
   var sortParam = req.query.sortParam;
 
-  var x=3;
+  var x=5;
   var len=sortParam.length;
   if(sortParam.charAt(0)==='-'){
    x = -1;
