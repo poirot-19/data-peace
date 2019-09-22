@@ -9,7 +9,7 @@ const router=express.Router();
 
 router.get('/users',(req,res)=>{
 
-  var x=2;
+  var x=3;
   var test="confirm"
   var page = req.query.page;
   var limit = req.query.limit;
