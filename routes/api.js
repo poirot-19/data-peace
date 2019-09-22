@@ -9,12 +9,17 @@ const router=express.Router();
 
 router.get('/users',(req,res)=>{
 
+  var x=2;
+  var test="confirm"
   var page = req.query.page;
   var limit = req.query.limit;
   var name = req.query.name;
   var sortParam = req.query.sortParam;
 
-  var x=5;
+
+  var x=3;
+
+
   var len=sortParam.length;
   if(sortParam.charAt(0)==='-'){
    x = -1;
@@ -23,16 +28,16 @@ router.get('/users',(req,res)=>{
    x = 1;
   }
 
-  User.paginate({ $or:[ {'first_name':{ "$regex": name, "$options": "i" }}, {'last_name':{ "$regex": name, "$options": "i" }} ]}
-                  ,[{ page: page, limit: Number(limit), sort:{sortParam:x} }], function(err, result) {
-    if(err){
-      console.log(err);
-    } else{
-      res.status(200).send(result.docs);
-    }
-  });
-
-});
+//  User.paginate({ $or:[ {'first_name':{ "$regex": name, "$options": "i" }}, {'last_name':{ "$regex": name, "$options": "i" }} ]}
+//                  ,[{ page: page, limit: Number(limit), sort:{sortParam:x} }], function(err, result) {
+//    if(err){
+////      console.log(err);
+//    } else{
+//      res.status(200).send(result.docs);
+//    }
+//  });
+//
+//});
 
 
 router.post('/users',function(req,res){
