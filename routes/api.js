@@ -29,7 +29,7 @@ router.get('/users',(req,res)=>{
   User.paginate({ $or:[ {'first_name':{ "$regex": name, "$options": "i" }}, {'last_name':{ "$regex": name, "$options": "i" }} ]}
                   ,[{ page: page, limit: Number(limit), sort:{sortParam:x} }], function(err, result) {
     if(err){
-      console.log(err);
+//      console.log(err);
     } else{
       res.status(200).send(result.docs);
     }
