@@ -9,6 +9,7 @@ const router=express.Router();
 
 router.get('/users',(req,res)=>{
 
+  var x=2;
   var page = req.query.page;
   var limit = req.query.limit;
   var name = req.query.name;
