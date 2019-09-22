@@ -26,16 +26,16 @@ router.get('/users',(req,res)=>{
    x = 1;
   }
 
-  User.paginate({ $or:[ {'first_name':{ "$regex": name, "$options": "i" }}, {'last_name':{ "$regex": name, "$options": "i" }} ]}
-                  ,[{ page: page, limit: Number(limit), sort:{sortParam:x} }], function(err, result) {
-    if(err){
-//      console.log(err);
-    } else{
-      res.status(200).send(result.docs);
-    }
-  });
-
-});
+//  User.paginate({ $or:[ {'first_name':{ "$regex": name, "$options": "i" }}, {'last_name':{ "$regex": name, "$options": "i" }} ]}
+//                  ,[{ page: page, limit: Number(limit), sort:{sortParam:x} }], function(err, result) {
+//    if(err){
+////      console.log(err);
+//    } else{
+//      res.status(200).send(result.docs);
+//    }
+//  });
+//
+//});
 
 
 router.post('/users',function(req,res){
